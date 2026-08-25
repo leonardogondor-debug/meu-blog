@@ -1,0 +1,16 @@
+[
+    {
+        "slug": "Primeiro-artigo",
+        "titulo": "Meu primeiro artigo",
+        "autor": "Leonardo",
+        "data": "2026-08-25",
+        "conteudo": "Este é o conteudo do primeiro artigo."
+    },
+    {
+        "slug": "Segundo-artigo",
+        "titulo": "Meu segundo artigo",
+        "autor": "Leonardo",
+        "data": "2026-08-26",
+        "conteudo": "Este é o conteudo do segundo artigo."
+    }
+]
