@@ -1,0 +1,29 @@
+.artigo_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.artigo_card {
+    border: 2px solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 2);
+    transition: transform 0.2s ease;  
+}
+
+.artigo_Card:hover {
+    transform: translateY(-5px);
+}
+
+.artigo_link {
+    font-size: 150%;
+}
+
+
+@media (min-Width: 1024px) {
+    .artigo_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

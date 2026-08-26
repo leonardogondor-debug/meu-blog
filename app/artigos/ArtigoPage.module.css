@@ -1,0 +1,14 @@
+.page {
+    border: 2px solid;
+    border-radius: 2rem;
+    padding: 5rem;
+}
+
+.page_titulo {
+    font-size: 170%;
+    margin-bottom: 1rem;
+}
+
+.page_conteudo {
+    font-size: 150%;
+}

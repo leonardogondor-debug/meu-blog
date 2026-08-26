@@ -1,0 +1,10 @@
+.header {
+    background-color: black;
+    color: aliceblue;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.header_titulo {
+    font-size: 200%;
+}
