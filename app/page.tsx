@@ -18,6 +18,6 @@ export default async function HomePage() {
           </li>
         ))}
       </ul>
-    </main>
+    </main> 
   );
 }
