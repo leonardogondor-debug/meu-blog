@@ -3,6 +3,7 @@ import artigosData from "../../data/artigo.json";
 import pageStyles from "../ArtigoPage.module.css";
 import type { Metadata } from "next";
 
+//gera parametros estaticos para criar paginas estaticas de cada arquivo
 export async function generateStaticParams() {
     const artigos: Artigo[] = artigosData;
     return artigos.map((artigo) => ({
@@ -10,6 +11,7 @@ export async function generateStaticParams() {
     })); 
 }
 
+//metodos dinamicos
 export async function geraMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const artigos: Artigo[] = artigosData;
     const artigo = artigos.find((a) => a.slug === params.slug);
@@ -19,12 +21,13 @@ export async function geraMetadata({ params }: { params: { slug: string } }): Pr
     };
 }
 
+//pagina do arquivo
 export default async function ArtigoPage({params}: { params: { slug: string }}) {
     const artigos: Artigo[] = artigosData;
     const { slug } = await params;
     const artigo = artigos.find((a) => a.slug === slug);
     
-    if (!artigo) return <h1>Artigo não encontrado</h1>;
+    if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
 
     return (
         <article className={pageStyles.page}>

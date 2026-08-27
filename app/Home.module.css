@@ -13,7 +13,7 @@
     transition: transform 0.2s ease;  
 }
 
-.artigo_Card:hover {
+.artigo_card:hover {
     transform: translateY(-5px);
 }
 
