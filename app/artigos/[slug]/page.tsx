@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 }
 
 //metodos dinamicos
-export async function geraMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const artigos: Artigo[] = artigosData;
     const artigo = artigos.find((a) => a.slug === params.slug);
     return {
