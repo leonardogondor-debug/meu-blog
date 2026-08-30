@@ -7,15 +7,14 @@ import type { Metadata } from "next";
 export async function generateStaticParams() {
     const artigos: Artigo[] = artigosData;
     return artigos.map((artigo) => ({
-        slug: artigo.slug.toLowerCase(),
-    }));
+        slug: artigo.slug,
+    })); 
 }
 
 //metodos dinamicos
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const artigos: Artigo[] = artigosData;
-    const { slug } = params;
-    const artigo = artigos.find((a) => a.slug.toLowerCase() === slug.toLowerCase());
+    const artigo = artigos.find((a) => a.slug === params.slug);
     return {
         title: artigo?.titulo || "Artigo",
         description: artigo?.conteudo.slice(0, 100) || "Descrição do artigo",
@@ -23,11 +22,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 //pagina do arquivo
-export default async function ArtigoPage({ params }: { params: { slug: string } }) {
+export default async function ArtigoPage({params}: { params: { slug: string }}) {
     const artigos: Artigo[] = artigosData;
-    const { slug } = params;
-    const artigo = artigos.find((a) => a.slug.toLowerCase() === slug.toLowerCase());
-
+    const { slug } =  params;
+    const artigo = artigos.find((a) => a.slug === slug);
+    
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
 
     return (
