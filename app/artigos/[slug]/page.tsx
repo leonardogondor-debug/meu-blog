@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export async function generateStaticParams() {
     const artigos: Artigo[] = artigosData;
     return artigos.map((artigo) => ({
-        slug: artigo.slug,
+        slug: artigo.slug.toLowerCase(),
     })); 
 }
 
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default  function ArtigoPage({params}: { params: { slug: string }}) {
     const artigos: Artigo[] = artigosData;
     const { slug } = params;
-    const artigo = artigos.find((a) => a.slug === slug);
+    const artigo = artigos.find((a) => a.slug.toLowerCase() === params.slug.toLowerCase());
     
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
 
