@@ -1,41 +1,41 @@
 [
     {
-        "slug": "Primeiro-artigo",
+        "slug": "primeiro-artigo",
         "titulo": "Meu primeiro artigo",
         "autor": "Leonardo",
         "data": "2026-08-25",
         "conteudo": "Este é o conteudo do primeiro artigo."
     },
     {
-        "slug": "Segundo-artigo",
+        "slug": "segundo-artigo",
         "titulo": "Meu segundo artigo",
         "autor": "Leonardo",
         "data": "2026-08-26",
         "conteudo": "Este é o conteudo do segundo artigo."
     },
     {
-        "slug": "Terceiro-artigo",
+        "slug": "terceiro-artigo",
         "titulo": "Meu terceiro artigo",
         "autor": "Leonardo",
         "data": "2026-08-26",
         "conteudo": "Este é o conteudo do terceiro artigo."
     },
     {
-        "slug": "Quarto-artigo",
+        "slug": "quarto-artigo",
         "titulo": "Meu quarto artigo",
         "autor": "Leonardo",
         "data": "2026-08-26",
         "conteudo": "Este é o conteudo do quarto artigo."
     },
     {
-        "slug": "Quinto-artigo",
+        "slug": "quinto-artigo",
         "titulo": "Meu quinto artigo",
         "autor": "Leonardo",
         "data": "2026-08-26",
         "conteudo": "Este é o conteudo do quinto artigo."
     },
     {
-        "slug": "Sexto-artigo",
+        "slug": "sexto-artigo",
         "titulo": "Meu sexto artigo",
         "autor": "Leonardo",
         "data": "2026-08-26",

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 export default async function ArtigoPage({ params }: { params: { slug: string } }) {
     const artigos: Artigo[] = artigosData;
     const { slug } = params;
-    const artigo = artigos.find((a) => a.slug === slug);
+    const artigo = artigos.find((a) => a.slug.toLowerCase() === slug.toLowerCase());
 
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
 
