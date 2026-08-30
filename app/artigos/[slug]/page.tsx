@@ -13,8 +13,9 @@ export async function generateStaticParams() {
 
 //metodos dinamicos
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const { slug } = await params;  
     const artigos: Artigo[] = artigosData;
-    const artigo = artigos.find((a) => a.slug === params.slug);
+    const artigo = artigos.find((a) => a.slug === slug);
     return {
         title: artigo?.titulo || "Artigo",
         description: artigo?.conteudo.slice(0, 100) || "Descrição do artigo",
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 //pagina do arquivo
 export default async function ArtigoPage({params}: { params: { slug: string }}) {
     const artigos: Artigo[] = artigosData;
-    const { slug } =  params;
+    const { slug } = await params;
     const artigo = artigos.find((a) => a.slug === slug);
     
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
