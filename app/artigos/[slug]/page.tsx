@@ -8,7 +8,7 @@ export async function generateStaticParams() {
     const artigos: Artigo[] = artigosData;
     return artigos.map((artigo) => ({
         slug: artigo.slug.toLowerCase(),
-    })); 
+    }));
 }
 
 //metodos dinamicos
@@ -22,11 +22,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 //pagina do arquivo
-export default  function ArtigoPage({params}: { params: { slug: string }}) {
+export default function ArtigoPage({ params }: { params: { slug: string } }) {
+    console.log("Slug recebido:", params.slug);
+
     const artigos: Artigo[] = artigosData;
-    const { slug } = params;
     const artigo = artigos.find((a) => a.slug.toLowerCase() === params.slug.toLowerCase());
-    
+
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
 
     return (
