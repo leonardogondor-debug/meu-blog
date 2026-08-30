@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export async function generateStaticParams() {
     const artigos: Artigo[] = artigosData;
     return artigos.map((artigo) => ({
-        slug: artigo.slug,
+        slug: artigo.slug.toLowerCase(),
     }));
 }
 
