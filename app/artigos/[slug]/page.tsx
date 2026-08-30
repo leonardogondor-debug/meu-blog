@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const artigos: Artigo[] = artigosData;
     const { slug } = params;
-    const artigo = artigos.find((a) => a.slug === params.slug);
+    const artigo = artigos.find((a) => a.slug.toLowerCase() === slug.toLowerCase());
     return {
         title: artigo?.titulo || "Artigo",
         description: artigo?.conteudo.slice(0, 100) || "Descrição do artigo",
