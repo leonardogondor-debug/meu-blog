@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 //pagina do arquivo
-export default async function ArtigoPage({params}: { params: { slug: string }}) {
+export default  function ArtigoPage({params}: { params: { slug: string }}) {
     const artigos: Artigo[] = artigosData;
-    const { slug } = await params;
+    const { slug } = params;
     const artigo = artigos.find((a) => a.slug === slug);
     
     if (!artigo) return <h1 className="m-4 text-xl">Artigo não encontrado</h1>;
