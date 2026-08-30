@@ -1,3 +1,5 @@
+"use client";
+
 import { Artigo } from "../../types/artigo";
 import artigosData from "../../data/artigo.json";
 import pageStyles from "../ArtigoPage.module.css";
